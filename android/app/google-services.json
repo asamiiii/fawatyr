@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "317628757656",
+    "project_id": "fawatyr-83e34",
+    "storage_bucket": "fawatyr-83e34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317628757656:android:74a74b4d83dc93f8e842ed",
+        "android_client_info": {
+          "package_name": "com.example.elnemr_invoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317628757656-dlq6j900l2t6br7791ve5an2t4v6lep4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvKIOAvYJgrmI2qfnK9IH-6WdW2R7ciHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317628757656-dlq6j900l2t6br7791ve5an2t4v6lep4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
