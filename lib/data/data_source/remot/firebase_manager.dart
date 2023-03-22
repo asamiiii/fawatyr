@@ -55,6 +55,7 @@ class FirebaseHelper {
     } catch (e) {
       //
     }
+    debugPrint('--> url : $url');
     return url ?? '';
   }
 

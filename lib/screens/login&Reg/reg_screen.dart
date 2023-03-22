@@ -62,7 +62,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 12),
                     child: Container(
                       width: MediaQuery.of(context).size.height * 0.5,
-                      height: MediaQuery.of(context).size.height * 0.65,
+                      height: MediaQuery.of(context).size.height * 0.55,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
@@ -148,6 +148,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     if (user != false) {
                                       // ignore: use_build_context_synchronously
                                      // hideLoading(context);
+                                      // ignore: use_build_context_synchronously
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
                                         builder: (context) =>

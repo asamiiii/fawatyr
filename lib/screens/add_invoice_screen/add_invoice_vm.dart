@@ -28,7 +28,7 @@ class AddInvoiceVM {
       isDelivered:isDelivered! ,
       notes: notes??''
     );
-    debugPrint(imageUrl);
+    debugPrint('------->Image Url :  $imageUrl');
     return id;
 
   }

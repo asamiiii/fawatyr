@@ -20,4 +20,14 @@ class CashHelper{
   static removeFromLocal()async{
      await sharedPreferences?.remove('collection_mail');
   }
+
+static addIsOnBoarding(bool onBoardingValue)async{
+await sharedPreferences?.setBool('isOnBoarding', onBoardingValue);
+}
+
+static bool getOnBoardingValue(){
+  bool? onBoardValue = sharedPreferences?.getBool('isOnBoarding');
+  onBoardValue==null?onBoardValue=true:onBoardValue=false;
+  return onBoardValue;
+}
 }

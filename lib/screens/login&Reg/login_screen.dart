@@ -160,7 +160,7 @@ class _LoginscreenState extends State<Loginscreen> {
                                         CashHelper.addToLocal(emailcon.text);
                                         // ignore: use_build_context_synchronously
                                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomePage(),));
-                                        
+                                        showSnakBarSuccess(context, 'تم تسجيل الدخول بنجاح', greenColor);
                                       }
                                       //hideLoading(context);
                                 }),
@@ -194,6 +194,7 @@ class _LoginscreenState extends State<Loginscreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const SignUpScreen()));
+
                       },
                       child: const Text("Sign Up")),
                 ],

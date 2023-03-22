@@ -6,6 +6,8 @@ import 'package:elnemr_invoice/screens/dept_history_screen/dept_provider.dart';
 import 'package:elnemr_invoice/screens/home_screen/home_provider.dart';
 import 'package:elnemr_invoice/screens/home_screen/home_screen.dart';
 import 'package:elnemr_invoice/screens/login&Reg/login_screen.dart';
+import 'package:elnemr_invoice/screens/login&Reg/reg_screen.dart';
+import 'package:elnemr_invoice/screens/on_boarding_screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +20,7 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await CashHelper.init();
-  runApp(const MyApp());
+  runApp( MyApp());
   MultiProvider(
     providers: [
     ChangeNotifierProvider(create: (context) => HomeProvider(),),
@@ -26,7 +28,7 @@ void main() async{
 
   ],
   
-  child:const MyApp() ,);
+  child: MyApp() ,);
 
    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
@@ -35,9 +37,11 @@ void main() async{
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
 
-  // This widget is the root of your application.
+   
+  bool isOnBoarding = CashHelper.getOnBoardingValue();
+  
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -46,7 +50,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: AppStrings.appName,
           theme: theme,
-          home: currentUser !=null ? const HomePage(): const Loginscreen(),
+          home: isOnBoarding==true ? const OnBoardingScreen() : currentUser !=null ? const HomePage(): const SignUpScreen(),
       
       ),
     );
